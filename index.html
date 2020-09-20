@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300&family=Raleway&family=Ranchers&display=swap" rel="stylesheet"> 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='responsive.css'>
     <script src='script.js'></script>
     <script src="https://kit.fontawesome.com/a2488c675b.js" crossorigin="anonymous"></script>
 </head>
@@ -19,12 +20,12 @@
         <div id="content">
             <div class="weatherInfo">
                 <h2 id="yourLocation" class="location">Your Location</h2>
-                <p id="date"></p>
+                <p class="date" id="yourDate"></p>
                 <div class="sky">
                     <p class="skycon"><img id="yourSkycon" src=""></i></p>
                     <h4 id="yourTemperature" class="temperature"><span id="yourDegree" class="degree">34</span>°C</h4>
                 </div>
-                <p id="yourSkyComment" class="skyComment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur libero ipsum et tenetur porro explicabo ad minima animi, distinctio alias veritatis est fuga repellat placeat! Quisquam doloremque necessitatibus commodi eligendi!</p>
+                <p id="yourSkyComment" class="skyComment">Lorem ipsum dolor sit</p>
                 <h3 id="yourTime" class="time"><span id="hour">22</span> : <span id="minutes">45</span> : <span id="seconds">45</span></h3>
             </div>
             <div>
@@ -33,14 +34,15 @@
                     <input type="text" placeholder="Name of city...">
                     <button onclick="checknewlocation()">GO!</button>
                 </div>
-                <div class="weatherInfo" id="otherLocation">
-                    <h2 class="location">Your Location</h2>
+                <div class="weatherInfo" id="otherLocationSection">
+                    <h2 id="otherLocation" class="location">Your Location</h2>
+                    <p id="otherDate" class="date"></p>
                     <div class="sky">
-                        <p class="skycon"><img id="skycon" src=""></p>
-                        <h4 class="temperature"><span class="degree">34</span>°C</h4>
+                        <p class="skycon"><img id="otherSkycon" src=""></p>
+                        <h4 class="temperature"><span id="otherDegree" class="degree">34</span>°C</h4>
                     </div>
-                    <p class="skyComment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem numquam labore eveniet? Ab illo sapiente laborum sed id quisquam error debitis tenetur quo facere libero, minus eaque placeat nihil tempora!</p>
-                    <h3 class="time"><span id="hour">22</span> : <span id="minutes">45</span> : <span id="seconds">45</span></h3>
+                    <p id="otherSkyComment" class="skyComment">Lorem ipsum dolor sit</p>
+                    <h3 id="otherTime" class="time"><span id="hour">22</span> : <span id="minutes">45</span> : <span id="seconds">45</span></h3>
                 </div>
             </div>
         </div>
