@@ -3,6 +3,7 @@ const api = {
 	key: "2402644934374c21f582a5b14f8cdb5e"
 }
 
+
 if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(function(position) {
 	let lat = position.coords.latitude;
@@ -25,12 +26,17 @@ function displayResult (result) {
 	const yourComment = document.querySelector("#yourSkyComment");
 	const yourTime = document.querySelector("#yourTime");
 	const yourDate = document.querySelector("#yourDate")
+	const yours = document.getElementById("yours");
+	const load = document.querySelectorAll(".lds-roller")
 
 	let time = setInterval(myTime, 1000);
 	yourLocation.textContent = `${result.name}, ${result.sys.country}`;
 	yourTemperature.textContent = `${Math.round(result.main.temp)}`;
 	yourComment.textContent = `${result.weather[0].description}`;
 	yourSkycon.src = `http://openweathermap.org/img/wn/${result.weather[0].icon}@2x.png`;
+	load[0].style.display = "none";
+	yours.style.display = "block";
+
 
 	function myTime () {
 		const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -46,12 +52,11 @@ function displayResult (result) {
 	}
 }
 
-function checknewlocation () {
-	let otherCity = document.querySelector("#otherLocationSection");
-	let set = document.querySelector("#setLocation");
+function checknewlocation () {	
+	let load = document.getElementsByClassName("lds-facebook");
 
-	otherCity.style.display = "block";
-	set.style.display = "none";
+	load[0].style.display = "block";
+
 
 	let input = document.querySelector("input");
 
@@ -69,13 +74,22 @@ function displayResultOther (result) {
 	const yourSkycon = document.querySelector("#otherSkycon");
 	const yourComment = document.querySelector("#otherSkyComment");
 	const yourTime = document.querySelector("#otherTime");
-	const yourDate = document.querySelector("#otherDate")
+	const yourDate = document.querySelector("#otherDate");
+	const load = document.getElementsByClassName("lds-facebook");
+	const otherCity = document.querySelector("#otherLocationSection");	
+	let set = document.querySelector("#setLocation");
 
 	let time = setInterval(myTime, 1000);
 	yourLocation.textContent = `${result.name}, ${result.sys.country}`;
 	yourTemperature.textContent = `${Math.round(result.main.temp)}`;
 	yourComment.textContent = `${result.weather[0].description}`;
 	yourSkycon.src = `http://openweathermap.org/img/wn/${result.weather[0].icon}@2x.png`;
+
+	load[0].style.display = "none";
+	otherCity.style.display = "block";
+	set.style.display = "none";
+
+
 
 	function myTime () {
 		const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]

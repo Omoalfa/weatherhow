@@ -19,20 +19,25 @@
         </header>
         <div id="content">
             <div class="weatherInfo">
-                <h2 id="yourLocation" class="location">Your Location</h2>
-                <p class="date" id="yourDate"></p>
-                <div class="sky">
-                    <p class="skycon"><img id="yourSkycon" src=""></i></p>
-                    <h4 id="yourTemperature" class="temperature"><span id="yourDegree" class="degree">34</span>°C</h4>
+                <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                <div id="yours">
+                    <h2 id="yourLocation" class="location">Your Location</h2>
+                    <p class="date" id="yourDate"></p>
+                    <div class="sky">
+                        <p class="skycon"><img id="yourSkycon" src=""></i></p>
+                        <h4 id="yourTemperature" class="temperature"><span id="yourDegree" class="degree">34</span>°C</h4>
+                    </div>
+                    <p id="yourSkyComment" class="skyComment">Lorem ipsum dolor sit</p>
+                    <h3 id="yourTime" class="time"><span id="hour">22</span> : <span id="minutes">45</span> : <span id="seconds">45</span></h3>
                 </div>
-                <p id="yourSkyComment" class="skyComment">Lorem ipsum dolor sit</p>
-                <h3 id="yourTime" class="time"><span id="hour">22</span> : <span id="minutes">45</span> : <span id="seconds">45</span></h3>
             </div>
             <div>
                 <div id="setLocation">
                     <h3>Check for other location here!</h3>
                     <input type="text" placeholder="Name of city...">
                     <button onclick="checknewlocation()">GO!</button>
+                    <br><br>
+                    <div class="lds-facebook"><div></div><div></div><div></div></div>
                 </div>
                 <div class="weatherInfo" id="otherLocationSection">
                     <h2 id="otherLocation" class="location">Your Location</h2>
